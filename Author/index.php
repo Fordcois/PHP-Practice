@@ -1,19 +1,15 @@
 <?php
-require 'functions.php';
-require 'Database.php';
-// require 'router.php';
 
-// connect to the MYSQL database, and execute a query
+require 'functions.php';
+//require 'router.php';
+require 'Database.php';
 
 $config = require('config.php');
-
 $db = new Database($config['database']);
 
-$posts= $db->query('select title from blog') ->fetchAll();
+$id = $_GET['id'];
+$query = "select * from blog where id = :id";
 
+$posts = $db->query($query, [':id' => $id])->fetch();
 
-
-foreach ($posts as $post) {
-    echo "<li>{$post['title']}</li>";
-}
-
+dd($posts);
