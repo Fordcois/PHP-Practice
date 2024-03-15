@@ -1,20 +1,19 @@
 <?php
 require 'functions.php';
+require 'Database.php';
 // require 'router.php';
 
-// connect to the MYSQL database
-$dsn ='mysql:host=localhost;port=3306;dbname=author;user=root;charset=utf8mb4';
+// connect to the MYSQL database, and execute a query
 
-$pdo = new PDO($dsn);
+$config = require('config.php');
 
-$statement= $pdo->prepare('select * from blog');
+$db = new Database($config['database']);
 
-$statement ->execute();
-
-$posts = $statement ->fetchAll();
+$posts= $db->query('select title from blog') ->fetchAll();
 
 
 
-
-dd($posts);
+foreach ($posts as $post) {
+    echo "<li>{$post['title']}</li>";
+}
 
