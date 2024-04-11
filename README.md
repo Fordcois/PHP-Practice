@@ -1,12 +1,6 @@
-# Author Portfolio Website
+# PHP - MySQL
 
-This repository contains the source code for a portfolio website designed for an author. The website is built using PHP and Tailwind CSS, serving as a practice and research project for learning these technologies.
-
-## Proposed Features
-
-- Showcase the author's books with titles, genres, and publication years.
-- Add a blog section for the author to share updates, insights, and news.
-- Enable search functionality to help visitors find specific books or content.
+This repository offers a semi-blank template of a simple PHP site, complete with a live link to a mySQL database. Constructed with PHP and enhanced with Tailwind CSS, the website serves as both a training ground and exploration platform for learning and developing these technologies.
 
 ## Usage
 
